@@ -46,6 +46,7 @@ public class SqsSender {
                         .messageBody(createUrlData()).build()
         ))
                 .retryWhen(Retry.max(3))
+                .repeat(3)
                 .subscribe();
     }
 
