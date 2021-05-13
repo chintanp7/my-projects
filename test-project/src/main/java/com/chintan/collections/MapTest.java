@@ -1,5 +1,6 @@
 package com.chintan.collections;
 
+import java.util.concurrent.ConcurrentHashMap;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.HashMap;
@@ -23,6 +24,9 @@ public class MapTest {
         System.out.println(s2.hashCode());
 
         System.out.println(map.size());
+
+        Map<String, String> stringMap = new ConcurrentHashMap<>();
+        stringMap.put("abc", null);
     }
 
 }
